@@ -7,7 +7,7 @@ const assertEqual = function(actual, expected) {
 assertEqual("Lighthouse Labs", "Bootcamp");
 assertEqual(1, 1);
 
-function assertEqual(actual, expected) {
+functionassertEqual (actual, expected) {
     if (actual === expected) {
       console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
     } else {
@@ -23,7 +23,13 @@ assertEqual("Lighthouse Labs", "Bootcamp"); // Should fail
 //Comparing identical numbers
 assertEqual(1, 1); // Should pass
 //Comparing non-identical numbers
-assertEqual(1, 2); // Should fail
+assertEqual(1, 2); // Should fail 
 
 
-  
+/*const name = 'Alice';
+console.log('Hello, ' + name + '!'); // logs: Hello, Alice!
+instead write it like this 
+The next example greets Alice using the template literals syntax.
+
+const name = 'Alice';
+console.log(`Hello, ${name}!`); // logs: Hello, Alice! /*
