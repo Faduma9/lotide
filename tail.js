@@ -7,7 +7,7 @@ const assertEqual = function(actual, expected) {
 [1, 2, 3] == [1, 2, 3] // => false
 
 
-const result = tail(["Hello", "Lighthouse", "Labs"]);
+const result  = tail(["Hello", "Lighthouse", "Labs"]);
 assertEqual(result, ["Lighthouse", "Labs"]); // => will always fail!
 
 
