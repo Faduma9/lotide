@@ -9,6 +9,7 @@ const assertEqual = function(actual, expected) {
 };
 
 
+
 // Function to compare if two arrays are equal
 const eqArrays = function(array1, array2) {
   if (array1.length !== array2.length) {
@@ -29,11 +30,11 @@ const letterPositions = function(sentence) {
   for (let i = 0; i < sentence.length; i++) {
     const letter = sentence[i];
   
-    // Check if the letter already exists in object
+    // Check if the letter already exists in the results object
     if (results[letter]) {
-      results[letter].push(i);
+      results[letter].push(i); // If it exists, push the current index to its array
     } else {
-      results[letter] = [i];
+      results[letter] = [i]; // If it doesn't exist, create a new array with the current index
     }
   }
   
