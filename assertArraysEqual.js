@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 2bf415dbbf3a582a15d93e7d5a9cf2a10c99c963
 // Compare two arrays for equality
 const eqArrays = function(arr1, arr2) {
   if (arr1.length !== arr2.length) {
