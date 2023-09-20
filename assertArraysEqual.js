@@ -11,6 +11,7 @@ const eqArrays = function(arr1, arr2) {
   }
   return true;
 };
+module.exports = assertArraysEqual;
 
 // Compare arrays and log the result
 const assertArraysEqual = function(arr1, arr2) {
