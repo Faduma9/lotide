@@ -1,4 +1,4 @@
-//test/tailTest.js
+//test/eqArrays.js
 const assertEqual = require('../assertEqual');
 const eqArrays = require('../eqArrays');
 
