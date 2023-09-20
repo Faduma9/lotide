@@ -1,22 +1,6 @@
-// FUNCTION IMPLEMENTATION
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
-
-// FUNCTION IMPLEMENTATION
-const tail = function(array) {
-  // Check if the array has at least one element
-  if (array.length <= 1) {
-    return [];
-  }
-  // Return a new array containing all elements except the first one
-  return array.slice(1);
-};
-module.exports = tail;
+//test/tailTest.js
+const assertEqual = require('../assertEqual');
+const tail = require('../tail');
 
 // Test Case 1: Check the returned array elements
 const result = tail(["Hello", "Lighthouse", "Labs"]);
