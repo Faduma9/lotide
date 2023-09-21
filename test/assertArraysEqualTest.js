@@ -1,12 +1,5 @@
-// assertArraysEqual.js
-const assertEqual = require('../assertEqual');
-const eqArrays = require('../eqArrays');
-
-const assertArraysEqual = function(arr1, arr2) {
-  if (eqArrays(arr1, arr2)) {
-    console.log(`✅✅✅ Assertion Passed: Arrays are equal: [${arr1}] === [${arr2}]`);
-  } else {
-    console.log(`🛑🛑🛑 Assertion Failed: Arrays are not equal: [${arr1}] !== [${arr2}]`);
-  }
-};
-
+const assertArraysEqual = require('../assertArraysEqual');
+/// Test cases
+assertArraysEqual([1, 2, 3], [1, 2, 3]); // Should pass
+assertArraysEqual(["1", "2", "3"], ["1", "2", "3"]);// Should pass
+assertArraysEqual([], []); // Should pass
