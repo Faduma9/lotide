@@ -1,17 +1,41 @@
-const assertEqual = require('../assertEqual');
+const assert = require('chai').assert;
 const middle = require('../middle');
-const assertArraysEqual = require ('../assertArraysEqual');
-// TEST CODE
-const testArray1 = [1];
-const testArray2 = [1, 2];
-const testArray3 = [1, 2, 3];
-const testArray4 = [1, 2, 3, 4];
-const testArray5 = [1, 2, 3, 4, 5];
-const testArray6 = [1, 2, 3, 4, 5, 6];
+const assertArraysEqual = require('../assertArraysEqual');
 
-assertArraysEqual(middle(testArray1), []);           //output: []
-assertArraysEqual(middle(testArray2), []);           //output: []
-assertArraysEqual(middle(testArray3), [2]);          //output: [2]
-assertArraysEqual(middle(testArray4), [2, 3]);       //output: [2, 3]
-assertArraysEqual(middle(testArray5), [3]);          //output: [3]
-assertArraysEqual(middle(testArray6), [3, 4]);       //output: [3, 4]
+describe('middle', () => {
+  it('should return an empty array for an input array with one element', () => {
+    const inputArray = [1];
+    const expected = [];
+    assert.deepEqual(middle(inputArray), expected);
+  });
+
+  it('should return an empty array for an input array with two elements', () => {
+    const inputArray = [1, 2];
+    const expected = [];
+    assert.deepEqual(middle(inputArray), expected);
+  });
+
+  it('should return [2] for an input array [1, 2, 3]', () => {
+    const inputArray = [1, 2, 3];
+    const expected = [2];
+    assert.deepEqual(middle(inputArray), expected);
+  });
+
+  it('should return [2, 3] for an input array [1, 2, 3, 4]', () => {
+    const inputArray = [1, 2, 3, 4];
+    const expected = [2, 3];
+    assert.deepEqual(middle(inputArray), expected);
+  });
+
+  it('should return [3] for an input array [1, 2, 3, 4, 5]', () => {
+    const inputArray = [1, 2, 3, 4, 5];
+    const expected = [3];
+    assert.deepEqual(middle(inputArray), expected);
+  });
+
+  it('should return [3, 4] for an input array [1, 2, 3, 4, 5, 6]', () => {
+    const inputArray = [1, 2, 3, 4, 5, 6];
+    const expected = [3, 4];
+    assert.deepEqual(middle(inputArray), expected);
+  });
+});

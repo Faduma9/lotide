@@ -1,21 +1,28 @@
-// assertEqual.js
-
-const assertEqual = function(actual, expected) {
-    if (actual === expected) {
-      console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
-    } else {
-      console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
-    }
-  };
-  
-  module.exports = assertEqual;
-  
-// test/assertEqualTest.js
-
+const assert = require('chai').assert;
 const assertEqualFunction = require('../assertEqual');
 
-// TEST CODE
-assertEqualFunction("Lighthouse Labs", "Lighthouse Labs"); // Should pass
-assertEqualFunction("Lighthouse Labs", "Bootcamp"); // Should fail
-assertEqualFunction(1, 1); // Should pass
-assertEqualFunction(1, 2); // Should fail
+describe('assertEqual', () => {
+  it('should pass when comparing two equal strings', () => {
+    const actual = "Lighthouse Labs";
+    const expected = "Lighthouse Labs";
+    assert.equal(actual, expected);
+  });
+
+  it('should fail when comparing two different strings', () => {
+    const actual = "Lighthouse Labs";
+    const expected = "Bootcamp";
+    assert.notEqual(actual, expected);
+  });
+
+  it('should pass when comparing two equal numbers', () => {
+    const actual = 1;
+    const expected = 1;
+    assert.equal(actual, expected);
+  });
+
+  it('should fail when comparing two different numbers', () => {
+    const actual = 1;
+    const expected = 2;
+    assert.notEqual(actual, expected);
+  });
+});
