@@ -1,9 +1,3 @@
-/*const assertArraysEqual = require('../assertArraysEqual');
-/// Test cases
-assertArraysEqual([1, 2, 3], [1, 2, 3]); // Should pass
-assertArraysEqual(["1", "2", "3"], ["1", "2", "3"]);// Should pass
-assertArraysEqual([], []); // Should pass*/
-
 const assert = require('chai').assert;
 const assertArraysEqual = require('../assertArraysEqual');
 
